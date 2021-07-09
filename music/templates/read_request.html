@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acoustic</title>
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <script src="https://kit.fontawesome.com/ab6caf2d21.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<img class="icon" src="{% static 'images/logo2.png' %}">
+<div class="navbar">
+    <a href="{% url 'main' %}">ACOUSTIC</a> &nbsp; &nbsp;
+    <a href="{% url 'song_upload' %}">UPLOAD A SONG</a> &nbsp; &nbsp;
+    <a href="{% url 'song_list' %}">VIEW ALL SONGS</a> &nbsp; &nbsp;
+    <a href="{% url 'song_request' %}">REQUEST A SONG</a> &nbsp; &nbsp;
+    <a href="{% url 'all_requests' %}">VIEW ALL REQUESTS</a> &nbsp; &nbsp;
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<strong style="font-size:24px;">{{ post.title }} | {{ post.author }}</strong><br><br><br>
+<table>
+    <thead>
+    <th>TITLE</th>
+    <th>DESCRIPTION</th>
+    </thead>
+    <tbody>
+    <tr><td>SONG NAME</td><td>{{ post.song_name }}</td></tr>
+    <tr><td>ARTIST NAME</td><td>{{ post.artist_name }}</td></tr>
+    <tr><td>ALBUM NAME</td><td>{{ post.album_name }}</td></tr>
+    <tr><td>NOTE</td><td>{{ post.note}}</td></tr>
+    </tbody>
+</table><br>
+<!-- {{ user.username}} - {{ post.author }} -->
+{% if user.is_authenticated %}
+{% ifequal user.username post.author %}
+
+<form method="post" action="{% url 'delete_request' post.pk %}">
+    {% csrf_token %}
+    <input type="submit" value="Delete request">
+</form>
+
+<!--
+{% ifequal post.author.id user.id %}
+{% endifequal %}-->
+{% endifequal %}
+<a href="{% url 'song_upload' %}">
+    <button>Upload this song</button>
+</a>
+{% endif %}
+</body>
+</html>

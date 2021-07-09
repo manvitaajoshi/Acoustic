@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+
+body, html{
+    background: black;
+    font-size: 18px;
+    margin:0;
+    padding:0;
+        max-width: 100%;
+    overflow-x: hidden;
+}
+.image{
+    width:34%;
+    position:absolute;
+    left:10%;
+    top: 50%;
+}
+.navbar{
+    padding-top:20px;
+    position: absolute;
+    top: 2%;
+    left: 13%;
+    color: #379683;
+    font-family: Raleway;
+    font-size: 18px;
+}
+
+.navbar a{
+color: white;}
+/*
+form  { display: table;
+
+ }
+
+p     { display: table-row;
+padding:10px;}
+
+ label{
+ display: inline-block;
+  width: 240px;
+  text-align: right;
+  margin-bottom:20px;
+  }
+
+input { display: table-cell;
+ padding:10px;
+ margin-left:15px;}
+*/
+a{
+    text-decoration: none;
+    color: black;
+}
+.icon{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top:4%;
+    left: 5%;
+}
+
+select{
+font-size: 16px;
+padding: 5px;
+}
+.box{
+    width: 450px;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    background-color: white;
+    height: 990px;
+    }
+    .box h1{
+    color: black;
+    padding-top: 45px;
+    text-transform: uppercase;
+    font-weight: 600;
+    }
+    .box input[type="text"],.box input[type="password"],
+    .box input[type="email"], .box input[type="date"], textarea, select
+    {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 10px;
+    width: 200px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.35s;
+    }
+    .box input[type="text"]:focus, .box input[type="password"]:focus,
+    .box input[type="email"]:focus,.box input[type="date"]:focus, textarea:focus, select:focus
+    {
+    width: 280px;
+    border-color: #379683;
+    }
+    .box input[type="submit"]
+    {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 14px 40px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    }
+    .box input[type="submit"]:hover{
+    background: #379683;
+    color: white;
+    }
+div.footer{
+    background-color: black;
+    color: #C6C9D0;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.container {
+position:absolute;
+top: 95%;
+left: 70%;}
+
+
+footer{
+    background-color: #379683;
+    color: black;
+    padding-top:100px;
+    padding-bottom:100px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+    width: 100%;
+    position: absolute;
+    top:220%;
+}

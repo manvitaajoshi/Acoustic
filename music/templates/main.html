@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/main.css' %}">
+    <script src="https://kit.fontawesome.com/ab6caf2d21.js" crossorigin="anonymous"></script>
+    <title>Acoustic</title>
+</head>
+<body>
+<img src="{% static 'images/piano.jpeg' %}">
+<div class="logo">
+    <img class="icon" src="{% static 'images/logo1.png' %}">
+    <div class="navbar">
+        <a href="{% url 'login_form' %}">LOGIN</a> &nbsp; &nbsp;
+        <a href="{% url 'register' %}">REGISTER</a> &nbsp; &nbsp;
+    </div>
+    <h1 class="heartbeat">ACOUST!C</h1>
+</div>
+<h2>de canción en canción</h2>
+<p class="text">
+        The songs you listen to, speak your mind.<br>
+We need not tell you the craze for music in today's world. People find joy and take solace in music.
+        The way the beats give us a natural high, the way we connect to the singer's emotions, the way we relate to the lyrics and whatnot.<br>
+All of us have been in a desperate search of something to destress the mind. Well, when it comes to a technique which does not require any physical activity, "MUSIC" screams its name.<br>
+Acoustic wants you to continue experiencing all of this. We provide our users with the option to enjoy the songs to their fullest. You can search for a song you like and download it. If it is not available you can request other users to upload it. If you feel you have found a bop song and the world needs to listen to it, then my friend, you can upload it!
+<br>Want to start this amazing experience?<br>
+    <a href="{% url 'register' %}"><button class="circle">Register</button></a>
+    </p>
+
+<footer>
+    ACOUSTIC MUSIC PVT. LTD.<br><br>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+</footer>
+</body>
+</html>

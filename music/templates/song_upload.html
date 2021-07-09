@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acoustic</title>
+    <link rel="stylesheet" href="{% static 'css/song_upload.css' %}">
+    <script src="https://kit.fontawesome.com/ab6caf2d21.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<img class="icon" src="{% static 'images/logo2.png' %}">
+<div class="navbar">
+    <a href="{% url 'options' %}">ACOUSTIC</a> &nbsp; &nbsp;
+    <a href="{% url 'song_list' %}">VIEW ALL SONGS</a> &nbsp; &nbsp;
+    <a href="{% url 'song_request' %}">REQUEST A SONG</a> &nbsp; &nbsp;
+    <a href="{% url 'all_requests' %}">VIEW ALL REQUESTS</a> &nbsp; &nbsp;
+</div>
+<img class="image" src="{% static 'images/headphones.png' %}">
+<div class="container">
+    <form method="post" enctype="multipart/form-data" class="box">
+        {% csrf_token %}
+        <h1 class="title">UPLOAD A SONG</h1>
+        {{ form.as_p}}
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+<footer>
+    ACOUSTIC MUSIC PVT. LTD.<br><br>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+</footer>
+</body>
+</html>

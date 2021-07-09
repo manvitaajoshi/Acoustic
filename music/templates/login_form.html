@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <script src="https://kit.fontawesome.com/ab6caf2d21.js" crossorigin="anonymous"></script>
+    <title>Acoustic</title>
+</head>
+<body>
+<img class="icon" src="{% static 'images/logo2.png' %}">
+<div class="navbar">
+    <a href="{% url 'main' %}">ACOUSTIC</a> &nbsp; &nbsp;
+    <a href="{% url 'register' %}">REGISTER</a> &nbsp; &nbsp;
+</div>
+<img class="image" src="{% static 'images/man-guitar.png' %}">
+<form class="box" action="/login_form" method="post">
+    {% csrf_token %}
+    <h1>LOGIN</h1><br>
+    {% for message in messages %}
+    <div style="color:red;"> {{ message }}</div>
+    {% endfor %}
+    <input type="text" name="username" placeholder="Username">
+    <input type="password" name="password" placeholder="Password">
+    <br><input type="submit" name="" value="Login"><br>
+    Don't have an account?
+    <input type="submit" name="" value="Signup">
+</form>
+<footer>
+    ACOUSTIC MUSIC PVT. LTD.<br><br>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+
+</footer>
+</body>
+</html>

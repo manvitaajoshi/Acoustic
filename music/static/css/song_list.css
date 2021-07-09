@@ -1,0 +1,182 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+
+@keyframes slide-in-top{0%{transform:translateY(-1000px);opacity:0}100%{transform:translateY(0);opacity:1}}
+.slide-in-top{animation:slide-in-top .7s cubic-bezier(.25,.46,.45,.94) both}
+body, html{
+    background: white;
+    font-size: 18px;
+    margin:0;
+    padding: 0;
+    color: black;
+    text-align: center;
+}
+.icon{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top:4%;
+    left: 5%;
+}
+
+.navbar{
+    padding-top:20px;
+    position: absolute;
+    top: 2%;
+    left: 13%;
+    color:black;
+    font-family: Raleway;
+    font-size: 18px;
+}
+div.contain
+{
+    font-family: Raleway;
+    margin: 0 auto;
+	padding: 20px 20px;
+	text-align: center;
+	color:black;
+}
+
+div.contain a
+{
+    color: #FFF;
+    text-decoration: none;
+    font: 20px Raleway;
+    margin: 0px 10px;
+    padding: 10px 10px;
+    position: relative;
+    z-index: 1;
+    cursor: pointer;
+    color:black;
+}
+
+.indigo
+{
+    background: yellow;
+    color:black;
+}
+
+div.topLeftBorders a:before
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 2px;
+    height: 0px;
+    background: #FFF;
+    content: "";
+    opacity: 1;
+    transition: all 0.3s;
+    color:black;
+}
+
+div.topLeftBorders a:after
+{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    width: 100%;
+    height: 2px;
+    background: #FFF;
+    content: "";
+    opacity: 1;
+    transition: all 0.3s;
+    color:black;
+}
+
+div.topLeftBorders a:hover:before
+{
+    height: 100%;
+    color:black;
+}
+
+div.topLeftBorders a:hover:after
+{
+    opacity: 0;
+    top: 100%;
+    color:black;
+}
+
+/*NAV BAR - DROPDOWN*/
+.title{
+padding-top:70px;
+padding-bottom:0px;
+}
+.tbl{
+padding-top:20px;
+padding-bottom:40px;
+font-family: 'Archivo Narrow', sans-serif;
+}
+
+table {
+   border-spacing: 1rem;
+   border-collapse: collapse;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
+th, td {
+  border-bottom: 1px solid black;
+    padding: 15px;
+  text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+/*
+.searching {
+    margin-left: 0%;
+    margin-right:0%;
+    width: 100%;
+}
+*/
+footer{
+    background-color: black;
+    color: white;
+    padding-top:70px;
+    padding-bottom:70px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+ input[type="text"]
+    {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 9px 5px;
+    width: 190px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.35s;
+    }
+    input[type='text']:focus
+    {
+    border-color: #005845;
+    }
+   input[type="submit"], button
+    {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 9px 25px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    }
+    input[type="submit"]:hover, button:hover{
+    background: #493167;
+    color:white;
+    }

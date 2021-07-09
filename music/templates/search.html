@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acoustic</title>
+    <link rel="stylesheet" href="{% static 'css/search.css' %}">
+    <script src="https://kit.fontawesome.com/ab6caf2d21.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<img class="icon" src="{% static 'images/logo2.png' %}">
+<div class="navbar">
+    <a href="{% url 'main' %}">ACOUSTIC</a> &nbsp; &nbsp;
+    <a href="{% url 'song_upload' %}">UPLOAD A SONG</a> &nbsp; &nbsp;
+        <a href="{% url 'song_list' %}">VIEW ALL SONGS</a> &nbsp; &nbsp;
+    <a href="{% url 'song_request' %}">REQUEST A SONG</a> &nbsp; &nbsp;
+    <a href="{% url 'all_requests' %}">VIEW ALL REQUESTS</a> &nbsp; &nbsp;
+</div>
+
+<div class="tbl">
+    <table>
+        <thead>
+        <tr>
+            <th>COVER</th>
+            <th>SONG</th>
+            <th>ARTIST</th>
+            <th>ALBUM</th>
+            <th>DOWNLOAD</th>
+            <th>DELETE</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for song in songs %}
+        <tr>
+            <td>
+                {% if song.album_cover %}
+                <img src="{{ song.album_cover.url }}" alt="{{ song.song_name }}" style="width: 150px; height:auto;">
+                {% else %}
+                <span> No cover</span>
+                {% endif %}
+            </td>
+            <td>{{ song.song_name }}</td>
+            <td>{{ song.artist_name }}</td>
+            <td>{{ song.album_name }}</td>
+            <td><a href="{% if song.audio_song %}{{ song.audio_song.url }}{% endif %}" target="_blank"><button> Download
+                {{song.song_name}} </button></a></td>
+            <td>
+                <form method="post" action="{% url 'delete_song' song.pk %}">
+                    {% csrf_token %}
+                    <input type="submit" value="Delete {{song.song_name}}">
+                </form>
+            </td>
+        </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+</div>
+<footer>
+    ACOUSTIC MUSIC PVT. LTD.<br><br>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+
+</footer>
+</body>
+</html>

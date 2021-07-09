@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Langar&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cedarville+Cursive&display=swap');
+
+@keyframes heartbeat{from{transform:scale(1);
+transform-origin:center center;
+animation-timing-function:ease-out}10%{transform:scale(.91);
+animation-timing-function:ease-in}17%{transform:scale(.98);
+animation-timing-function:ease-out}33%{transform:scale(.87);
+animation-timing-function:ease-in}45%{transform:scale(1);
+animation-timing-function:ease-out}}
+
+body, html{
+    background: black;
+    margin:0;
+}
+
+.heartbeat{animation:heartbeat 1.5s ease-in-out 2 both}
+
+.logo{
+    position: absolute;
+    top:6%;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+h1{
+    font-family: Raleway;
+    padding-top: 70px;
+    color: #ffffb1;
+    position: absolute;
+    left:50%;
+    font-size: 90px;
+    margin: 0;
+}
+h2{
+    font-family: 'Cedarville Cursive', cursive;
+    color: white;
+    position: absolute;
+    left:57%;
+    top: 30%;
+    font-size:30px;
+}
+.text{
+position: absolute;
+top: 100%;
+left:10%;
+max-width:45%;
+background-color: #ffffb1;
+color: black;
+padding: 50px 80px 5px 80px;
+font-family: 'Cedarville Cursive', cursive;
+font-weight: 800;
+font-size: 22px;
+}
+
+.bird{
+position: absolute;
+top: -50%;
+left:-100%;
+transform: scale(0.3);
+animation: fly 3s;
+}
+
+@keyframes fly {
+from{transform: translateX(0)
+}
+to{
+transform: translateX(200%)}
+}
+img{
+    width:100%;
+    height:auto;
+    opacity: 0.8;
+}
+.icon{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top:2%;
+    left: 5%;
+}
+.navbar{
+    padding-top:20px;
+    position: absolute;
+    top: 15%;
+    left: 13%;
+    color: white;
+    font-family: Raleway;
+    font-size: 18px;
+}
+
+.navbar a:hover{
+    color: #ffffb1;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+.circle{
+width: 100px;
+padding: 50px 0;
+line-height: 0;
+margin: 60px auto;
+color: black;
+font-weight: 600;
+background-color:#ffffb1;
+border: 2px solid black;
+border-radius: 50px;
+cursor: pointer;
+transition: background-color 1s, color 1s, transform 0.5s;
+position: relative;
+left: 40%;
+horizontal-align:middle;
+text-align:center;
+}
+
+.circle:hover{
+background-color:black;
+color: #ffffb1;
+transform: rotate(360deg);
+}
+
+
+footer{
+    background-color: black;
+    color: #ffffb1;
+    padding-top:70px;
+    padding-bottom:70px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}

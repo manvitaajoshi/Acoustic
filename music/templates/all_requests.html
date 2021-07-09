@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acoustic</title>
+    <link rel="stylesheet" href="{% static 'css/all_request.css' %}">
+    <script src="https://kit.fontawesome.com/ab6caf2d21.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<img class="icon" src="{% static 'images/logo2.png' %}">
+<div class="navbar">
+    <a href="{% url 'options' %}">HOME</a>&nbsp;|&nbsp;
+    <a href="{% url 'song_request' %}">REQUEST A SONG</a>&nbsp;|&nbsp;
+    <a href="{% url 'song_list' %}">VIEW ALL SONGS</a>&nbsp;|&nbsp;
+    <a href="{% url 'song_upload' %}">UPLOAD A SONG</a>&nbsp;|&nbsp;
+
+</div>
+<br>
+<!-- slide-in-top-->
+<h1 class="title">USERS' REQUESTS</h1>
+<div class="request">
+    {% for post in posts %}
+    <strong style="width:26px;">{{ post.title }} | {{ post.author }}</strong>
+    <form method="post" action="{% url 'read_request' post.pk %}">
+        {% csrf_token %}
+        <input type="submit" value="Read more">
+    </form>
+    <hr>
+    <!--
+    <details>
+        <summary>{{ post.title }} | {{ post.author }}
+        </summary>
+        <p>
+            SONG NAME:&nbsp;{{ post.song_name }}<br>
+            ARTIST:&nbsp;{{ post.artist_name }}<br>
+            ALBUM:&nbsp;{{ post.album_name }}<br>
+            NOTE:&nbsp;{{ post.note}}<br>
+        <form method="post" action="{% url 'delete_request' post.pk %}">
+            {% csrf_token %}
+            <input type="submit" value="Delete request">
+        </form>
+        <a href="{% url 'song_upload' %}">
+            <button>Upload the song</button>
+        </a>
+        <br><br>
+        </p>
+    </details>
+    -->
+    {% endfor %}
+</div>
+
+<!--
+<footer>
+    ACOUSTIC MUSIC PVT. LTD.<br><br>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+</footer>
+-->
+</body>
+</html>

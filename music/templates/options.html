@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Acoustic</title>
+    <link rel="stylesheet" href="{% static 'css/options.css' %}">
+    <script src="https://kit.fontawesome.com/ab6caf2d21.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<img class="icon" src="{% static 'images/logo2.png' %}">
+<div class="navbar">
+    <a href="{% url 'main' %}">ACOUSTIC</a> &nbsp; &nbsp;&nbsp;
+</div>
+<div class="content">
+    <h1 class="welcome">Welcome, {{user.username}}!</h1>
+    <div class="opt">
+         <form method="post" action="{% url 'log_out' %}" class="logoutbtn">
+                    {% csrf_token %}
+                    <input type="submit" value="Logout">
+                </form>
+
+        <p>ACOUSTIC provides a wide range of options for the users to try.<br>Explore all of them and find your joy
+            within the songs
+            which touch your heart.</p>
+        <button type="submit"><a href="{% url 'song_list' %}">View all songs</a></button>
+        <button type="submit"><a href="{% url 'song_request' %}">Request a song</a></button>
+        <button type="submit"><a href="{% url 'song_upload' %}">Upload a song</a></button>
+        <button type="submit"><a href="{% url 'all_requests' %}">View the song requests</a></button>
+    </div>
+</div>
+
+<footer>
+    ACOUSTIC MUSIC PVT. LTD.<br><br>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+</footer>
+
+</body>
+</html>

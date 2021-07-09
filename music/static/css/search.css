@@ -1,0 +1,110 @@
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Narrow&display=swap');
+
+@keyframes slide-in-top{0%{transform:translateY(-1000px);opacity:0}100%{transform:translateY(0);opacity:1}}
+.slide-in-top{animation:slide-in-top .7s cubic-bezier(.25,.46,.45,.94) both}
+body, html{
+    background: #ebffeb;
+    font-size: 18px;
+    margin:0;
+    padding: 0;
+    text-align: center;
+}
+.icon{
+    width: auto;
+    height: auto;
+    position: absolute;
+    top:4%;
+    left: 5%;
+}
+.navbar{
+    padding-top:20px;
+    position: absolute;
+    top: 2%;
+    left: 13%;
+    color: white;
+    font-family: Raleway;
+    font-size: 18px;
+}
+.title{
+padding-top:70px;
+padding-bottom:0px;
+}
+.tbl{
+padding-top:90px;
+padding-bottom:40px;
+font-family: 'Archivo Narrow', sans-serif;
+}
+
+table {
+   border-spacing: 1rem;
+   border-collapse: collapse;
+   margin-left: auto;
+   margin-right: auto;
+
+}
+
+th, td {
+  border-bottom: 1px solid black;
+    padding: 15px;
+  text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+/*
+.searching {
+    margin-left: 0%;
+    margin-right:0%;
+    width: 100%;
+}
+*/
+footer{
+    background-color: black;
+    color: #ebffeb;
+    padding-top:70px;
+    padding-bottom:70px;
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+
+ input[type="text"]
+    {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 9px 5px;
+    width: 190px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.35s;
+    }
+    input[type='text']:focus
+    {
+    border-color: #005845;
+    }
+     input[type="submit"], button
+    {
+    border: 0;
+    background: none;
+    display: block;
+    margin: 20px auto;
+    text-align: center;
+    border: 2px solid black;
+    padding: 9px 25px;
+    outline: none;
+    color: black;
+    border-radius: 24px;
+    transition: 0.25s;
+    cursor: pointer;
+    }
+    input[type="submit"]:hover, button:hover{
+    background: #493167;
+    color:white;
+    }

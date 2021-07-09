@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'css/register.css' %}">
+    <script src="https://kit.fontawesome.com/ab6caf2d21.js" crossorigin="anonymous"></script>
+    <title>Acoustic</title>
+</head>
+
+<body>
+<!--
+<img class="icon" src="{% static 'images/logo2.png' %}">
+<div class="navbar">
+    <a href="{% url 'main' %}">ACOUSTIC</a> &nbsp; &nbsp;
+    <a href="{% url 'login_form'%}">LOGIN</a> &nbsp; &nbsp;
+
+</div>
+-->
+<h1>Upload interesting songs so that the members of our community can enjoy to their best!!!!</h1>
+
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <input type="text" name="song_name" placeholder="Name of the song">
+    <input type="text" name="artist_name" placeholder="Name of the artist">
+    <input type="text" name="album_name" placeholder="Name of the album">
+    <input type="file" name="audio_song" placeholder="">
+    <input type="submit" value="submit">
+</form>
+{% if url %}
+<p>Uploaded file: <a href="{{ url }}">{{ url }}</a></p>
+{% endif %}
+<!--
+<footer>
+    ACOUSTIC MUSIC PVT. LTD.<br><br>
+    <i class="fa fa-linkedin" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-twitter" aria-hidden="true"></i>&nbsp; &nbsp;
+    <i class="fa fa-facebook" aria-hidden="true"></i>
+-->
+</footer>
+</body>
+
+</html>
