@@ -28,7 +28,7 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, "templates")
 # See https://docs.djangoproject.com/en/3.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '7azv$)679gn*=ryz!)ww(nv(6r--w4j_+7_$6os(oa3wtx8qs7'
+SECRET_KEY = "Your secret key should be here"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -85,7 +85,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'music',
         'USER': 'root',
-        'PASSWORD': 'Mj260601@M',
+        'PASSWORD': 'Your_DB_Password',
         'host': 'localhost',
         'PORT': '3306',
         'OPTIONS': {'init_command': "SET sql_mode='STRICT_TRANS_TABLES'", },
